@@ -24,4 +24,4 @@ This content pack provides a dashboard for auditing Backup events:
 
 ## Screenshots
 
-![Dashboard](https://github.com/andreaconsadori/BackupExecR15/blob/master/Screenshot.PNG)
+![Dashboard](http://prntscr.com/a1bxn4)
