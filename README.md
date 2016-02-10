@@ -24,4 +24,4 @@ This content pack provides a dashboard for auditing Backup events:
 
 ## Screenshots
 
-![Dashboard](http://prntscr.com/a1bxn4)
+![Dashboard](http://i.imgur.com/lREvkIj.png)
