@@ -1,0 +1,257 @@
+{
+  "id" : null,
+  "name" : "BackupExec V15",
+  "description" : "tested on Vray Edition",
+  "category" : "Backup",
+  "inputs" : [ ],
+  "streams" : [ {
+    "id" : "5507fc43e4b06ae41c8791c1",
+    "title" : "Failed Backup",
+    "description" : "Vray Backup Exec 2014",
+    "disabled" : false,
+    "outputs" : [ ],
+    "stream_rules" : [ {
+      "type" : "EXACT",
+      "field" : "SourceName",
+      "value" : "Backup Exec",
+      "inverted" : false
+    }, {
+      "type" : "EXACT",
+      "field" : "EventID",
+      "value" : "34113",
+      "inverted" : false
+    } ]
+  } ],
+  "outputs" : [ ],
+  "dashboards" : [ {
+    "title" : "Veritas BackupExec",
+    "description" : "backup exec 15",
+    "dashboard_widgets" : [ {
+      "description" : "Jobs Failed (30d)",
+      "type" : "SEARCH_RESULT_CHART",
+      "configuration" : {
+        "interval" : "week",
+        "query" : "SourceName:\"Backup Exec\" AND EventID:34113",
+        "timerange" : {
+          "range" : 2592000,
+          "type" : "relative"
+        }
+      },
+      "col" : 1,
+      "row" : 1,
+      "cache_time" : 10
+    }, {
+      "description" : "Jobs Warning (30d)",
+      "type" : "SEARCH_RESULT_CHART",
+      "configuration" : {
+        "interval" : "week",
+        "query" : "SourceName:\"Backup Exec\" AND EventID:33919",
+        "timerange" : {
+          "range" : 2592000,
+          "type" : "relative"
+        }
+      },
+      "col" : 1,
+      "row" : 2,
+      "cache_time" : 10
+    }, {
+      "description" : "Jobs Cancellation (30d)",
+      "type" : "SEARCH_RESULT_CHART",
+      "configuration" : {
+        "interval" : "week",
+        "query" : "SourceName:\"Backup Exec\" AND EventID:34114",
+        "timerange" : {
+          "range" : 2592000,
+          "type" : "relative"
+        }
+      },
+      "col" : 1,
+      "row" : 3,
+      "cache_time" : 10
+    }, {
+      "description" : "Jobs Failed Sources (30d)",
+      "type" : "QUICKVALUES",
+      "configuration" : {
+        "field" : "source",
+        "query" : "SourceName:\"Backup Exec\" AND EventID:34113",
+        "show_data_table" : true,
+        "timerange" : {
+          "range" : 2592000,
+          "type" : "relative"
+        },
+        "show_pie_chart" : false
+      },
+      "col" : 3,
+      "row" : 1,
+      "cache_time" : 10
+    }, {
+      "description" : "Jobs Warning Sources (30d)",
+      "type" : "QUICKVALUES",
+      "configuration" : {
+        "field" : "source",
+        "query" : "SourceName:\"Backup Exec\" AND EventID:33919",
+        "show_data_table" : true,
+        "timerange" : {
+          "range" : 2592000,
+          "type" : "relative"
+        },
+        "show_pie_chart" : false
+      },
+      "col" : 3,
+      "row" : 2,
+      "cache_time" : 10
+    }, {
+      "description" : "Jobs Cancellation sources (30d)",
+      "type" : "QUICKVALUES",
+      "configuration" : {
+        "field" : "source",
+        "query" : "SourceName:\"Backup Exec\" AND EventID:34114",
+        "show_data_table" : true,
+        "timerange" : {
+          "range" : 2592000,
+          "type" : "relative"
+        },
+        "show_pie_chart" : false
+      },
+      "col" : 3,
+      "row" : 3,
+      "cache_time" : 10
+    }, {
+      "description" : "Jobs Failed (7d)",
+      "type" : "SEARCH_RESULT_COUNT",
+      "configuration" : {
+        "trend" : true,
+        "query" : "SourceName:\"Backup Exec\" AND EventID:34113",
+        "timerange" : {
+          "range" : 604800,
+          "type" : "relative"
+        },
+        "lower_is_better" : true
+      },
+      "col" : 4,
+      "row" : 1,
+      "cache_time" : 10
+    }, {
+      "description" : "Jobs warnings (7d)",
+      "type" : "SEARCH_RESULT_COUNT",
+      "configuration" : {
+        "trend" : true,
+        "query" : "SourceName:\"Backup Exec\" AND EventID:33919",
+        "timerange" : {
+          "range" : 604800,
+          "type" : "relative"
+        },
+        "lower_is_better" : true
+      },
+      "col" : 4,
+      "row" : 2,
+      "cache_time" : 10
+    }, {
+      "description" : "Jobs Cancellation (7d)",
+      "type" : "SEARCH_RESULT_COUNT",
+      "configuration" : {
+        "trend" : true,
+        "query" : "SourceName:\"Backup Exec\" AND EventID:34114",
+        "timerange" : {
+          "range" : 604800,
+          "type" : "relative"
+        },
+        "lower_is_better" : true
+      },
+      "col" : 4,
+      "row" : 3,
+      "cache_time" : 10
+    }, {
+      "description" : "Jobs Completed (30d)",
+      "type" : "SEARCH_RESULT_CHART",
+      "configuration" : {
+        "interval" : "week",
+        "query" : "SourceName:\"Backup Exec\" AND EventID:34112",
+        "timerange" : {
+          "range" : 2592000,
+          "type" : "relative"
+        }
+      },
+      "col" : 1,
+      "row" : 5,
+      "cache_time" : 10
+    }, {
+      "description" : "Jobs Completed (7d)",
+      "type" : "SEARCH_RESULT_COUNT",
+      "configuration" : {
+        "trend" : true,
+        "query" : "SourceName:\"Backup Exec\" AND EventID:34112",
+        "timerange" : {
+          "range" : 604800,
+          "type" : "relative"
+        },
+        "lower_is_better" : false
+      },
+      "col" : 4,
+      "row" : 5,
+      "cache_time" : 10
+    }, {
+      "description" : "Jobs Complete Sources",
+      "type" : "QUICKVALUES",
+      "configuration" : {
+        "field" : "source",
+        "query" : "SourceName:\"Backup Exec\" AND EventID:34112",
+        "show_data_table" : true,
+        "timerange" : {
+          "range" : 2592000,
+          "type" : "relative"
+        },
+        "show_pie_chart" : false
+      },
+      "col" : 3,
+      "row" : 5,
+      "cache_time" : 10
+    }, {
+      "description" : "Jobs completed with Exceptions (30d)",
+      "type" : "SEARCH_RESULT_CHART",
+      "configuration" : {
+        "interval" : "week",
+        "query" : "SourceName:\"Backup Exec\" AND EventID:57755",
+        "timerange" : {
+          "range" : 2592000,
+          "type" : "relative"
+        }
+      },
+      "col" : 1,
+      "row" : 4,
+      "cache_time" : 10
+    }, {
+      "description" : "Jobs Completed with exception sources (30d)",
+      "type" : "QUICKVALUES",
+      "configuration" : {
+        "field" : "source",
+        "query" : "SourceName:\"Backup Exec\" AND EventID:57755",
+        "show_data_table" : true,
+        "timerange" : {
+          "range" : 2592000,
+          "type" : "relative"
+        },
+        "show_pie_chart" : false
+      },
+      "col" : 3,
+      "row" : 4,
+      "cache_time" : 10
+    }, {
+      "description" : "Jobs completed with Exceptions (7d)",
+      "type" : "SEARCH_RESULT_COUNT",
+      "configuration" : {
+        "trend" : true,
+        "query" : "SourceName:\"Backup Exec\" AND EventID:57755",
+        "timerange" : {
+          "range" : 604800,
+          "type" : "relative"
+        },
+        "lower_is_better" : true
+      },
+      "col" : 4,
+      "row" : 4,
+      "cache_time" : 10
+    } ]
+  } ],
+  "grok_patterns" : [ ]
+}
