@@ -18,10 +18,6 @@ This content pack provides a dashboard for auditing Backup events:
 
 * NXLog collecting windows logs, other log collectors will work but may require modifying the searches to match the different fields outputted by other collectors
 
-
-```
-
-
 ## Screenshots
 
 ![Dashboard](http://i.imgur.com/lREvkIj.png)
