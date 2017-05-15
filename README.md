@@ -1,6 +1,6 @@
-# Veritas Backup Exec R15 Windows Event log monitoring
+# Veritas Backup Exec 2016 Windows Event log monitoring
 
-Tested with Sidecar /Windows 2012R2 /Graylog 2.2.3
+Tested with Sidecar /Windows 2012R2 /Graylog 2.2.3 / Backup Exec 2016
 
 This content pack provides a dashboard for auditing Backup events:
 * Job Failed - 30days view and 7days counters 
