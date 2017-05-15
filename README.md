@@ -1,5 +1,7 @@
 # Veritas Backup Exec 2016 Windows Event log monitoring
 
+Forked from NXLog version https://github.com/andreaconsadori/BackupExecR15
+
 Tested with Sidecar /Windows 2012R2 /Graylog 2.2.3 / Backup Exec 2016
 
 This content pack provides a dashboard for auditing Backup events:
