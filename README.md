@@ -1,6 +1,6 @@
 # Veritas Backup Exec R15 Windows Event log monitoring
 
-Tested with nxLog/Windows 2012R2 /Graylog 1.3
+Tested with Sidecar /Windows 2012R2 /Graylog 2.2.3
 
 This content pack provides a dashboard for auditing Backup events:
 * Job Failed - 30days view and 7days counters 
@@ -16,7 +16,7 @@ This content pack provides a dashboard for auditing Backup events:
 
 ## Requirements
 
-* NXLog collecting windows logs, other log collectors will work but may require modifying the searches to match the different fields outputted by other collectors
+* GrayLog Side Car for collecting logs.
 
 ## Screenshots
 
